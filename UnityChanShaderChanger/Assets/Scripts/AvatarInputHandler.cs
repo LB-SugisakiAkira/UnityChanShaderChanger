@@ -4,29 +4,24 @@ public class AvatarInputHandler : MonoBehaviour
 {
     public AvatarController avatarController;
 
-    private bool isDragging = false;
     private Vector3 lastMousePosition;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 左クリックでドラッグ開始
+        // 左クリックが押されている
+        if (Input.GetMouseButton(0))
         {
-            isDragging = true;
-            lastMousePosition = Input.mousePosition;
-        }
-
-        if (isDragging)
-        {
-            // 左右の回転処理
+            // 左右に回転
             Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
-            avatarController.RotateAvatar(-deltaMouse.x);
-
-            lastMousePosition = Input.mousePosition;
+            avatarController.RotateAvatar(-deltaMouse.x); // ドラッグの方向と同じにするためマイナスをかける
         }
 
-        if (Input.GetMouseButtonUp(0)) // 左クリックを離した時にドラッグ停止
+        // 中ボタンが押されている
+        if (Input.GetMouseButton(2))
         {
-            isDragging = false;
+            // 上下左右に移動
+            Vector3 deltaMouse = Input.mousePosition - lastMousePosition;
+            avatarController.MoveAvatar(new Vector3(deltaMouse.x, deltaMouse.y, 0));
         }
 
         // スクロールホイールでスケール
@@ -35,5 +30,8 @@ public class AvatarInputHandler : MonoBehaviour
         {
             avatarController.ScaleAvatar(scroll);
         }
+
+        // マウスの位置を更新
+        lastMousePosition = Input.mousePosition;
     }
 }

@@ -3,11 +3,12 @@ using UnityEngine;
 public class AvatarController : MonoBehaviour
 {
     public GameObject avatarModel; // アバターのモデル
-    private float moveSpeed = 0.1f; // 移動速度
+
+    private float moveSpeed = 0.05f; // 移動速度
     private float rotateSpeed = 0.5f; // 回転速度
     private float scaleSpeed = 0.1f; // 拡大縮小速度
-    private float minScale = 0.5f; // 最小スケール
-    private float maxScale = 3f; // 最大スケール
+    private readonly float minScale = 0.5f; // 最小スケール
+    private readonly float maxScale = 15f; // 最大スケール
 
     // 移動処理
     public void MoveAvatar(Vector3 direction)
