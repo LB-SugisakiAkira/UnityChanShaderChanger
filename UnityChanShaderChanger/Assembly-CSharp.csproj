@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AvatarInputHandler.cs" />
     <Compile Include="Assets\Scripts\AvatarController.cs" />
+    <Compile Include="Assets\Scripts\ShaderController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
