@@ -211,7 +211,7 @@ MonoBehaviour:
   avatarModel: {fileID: 303659385}
   minX: -10
   maxX: 10
-  minY: -9
+  minY: -12
   maxY: 4
 --- !u!114 &303659388
 MonoBehaviour:
@@ -226,10 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarModel: {fileID: 303659385}
-  materials:
-  - {fileID: 2100000, guid: 0cf15811daf3181478199221b89b53bb, type: 2}
-  - {fileID: 2100000, guid: d94e844b9bf3cc14a93cf2217a1fee74, type: 2}
-  - {fileID: 2100000, guid: 98e89f95d8c4c0145bbff38f8492d4db, type: 2}
+  shaders:
+  - {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
+  - {fileID: 4800000, guid: 9ecb3eabe4c6e4c4a9caa0c65e228e21, type: 3}
+  - {fileID: 4800000, guid: 3676f67c231d1f94497110344722f8af, type: 3}
 --- !u!1 &336162545
 GameObject:
   m_ObjectHideFlags: 0
